@@ -1,0 +1,74 @@
+@reference "./tailwind.css";
+/* If we can, use @apply to extend classes that are already there */
+
+.kcLoginClass {
+    @apply flex flex-col justify-center items-center gap-4 min-h-screen bg-base-100;
+}
+
+.kcFormCardClass {
+    @apply card w-96 bg-base-100 shadow-sm p-4 flex flex-col gap-4 ;
+}
+
+#kc-page-title {
+    @apply text-2xl font-bold text-center ;
+}
+
+.kcInputClass {
+    @apply w-full;
+}
+
+.kcFormGroupClass {
+    @apply fieldset;
+}
+
+.kcLabelClass {
+    @apply label;
+}
+
+.kcInputClass {
+    @apply input;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+    @apply btn btn-square;
+}
+
+input#rememberMe {
+    @apply checkbox;
+}
+
+.kcInputErrorMessageClass {
+    @apply text-error;
+}
+
+.kcInputGroup {
+    @apply join;
+}
+
+.kcInputGroup > .kcInputClass {
+    @apply join-item;
+}
+
+.kcInputGroup > .kcFormPasswordVisibilityButtonClass {
+    @apply join-item;
+}
+
+.kcButtonClass {
+    @apply btn;
+}
+
+.kcButtonPrimaryClass {
+    @apply btn-primary;
+}
+
+.kcButtonBlockClass {
+    @apply btn-block;
+}
+
+.kcInfoAreaWrapperClass {
+    @apply text-sm text-center text-base-content/70;
+
+    a {
+        @apply link text-primary;
+    }
+}
