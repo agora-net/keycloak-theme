@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import tailwindcss from '@tailwindcss/vite'
 import react from "@vitejs/plugin-react";
 import { keycloakify } from "keycloakify/vite-plugin";
 
@@ -6,6 +7,7 @@ import { keycloakify } from "keycloakify/vite-plugin";
 export default defineConfig({
     plugins: [
         react(),
+        tailwindcss(),
         keycloakify({
             accountThemeImplementation: "none"
         })
