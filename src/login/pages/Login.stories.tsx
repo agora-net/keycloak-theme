@@ -42,6 +42,16 @@ export const WithInvalidCredential: Story = {
     )
 };
 
+export const WithoutInternationalization: Story = {
+    render: () => (
+        <KcPageStory
+            kcContext={{
+              realm: { internationalizationEnabled: false }  
+            }}
+        />
+    )
+};
+
 export const WithoutRegistration: Story = {
     render: () => (
         <KcPageStory
