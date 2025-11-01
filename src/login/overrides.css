@@ -76,3 +76,23 @@ input#rememberMe {
 .subtitle {
     @apply text-sm text-base-content/70;
 }
+
+.alert-error {
+    @apply alert alert-error alert-soft;
+}
+
+.alert-info {
+    @apply alert alert-info alert-soft;
+}
+
+.alert-success {
+    @apply alert alert-success alert-soft;
+}
+
+.alert-warning {
+    @apply alert alert-warning alert-soft;
+}
+
+#kc-content-wrapper {
+    @apply flex flex-col gap-4;
+}
