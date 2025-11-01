@@ -42,7 +42,7 @@ input#rememberMe {
 }
 
 .kcInputGroup {
-    @apply join;
+    @apply w-full join;
 }
 
 .kcInputGroup > .kcInputClass {
@@ -71,4 +71,8 @@ input#rememberMe {
     a {
         @apply link text-primary;
     }
+}
+
+.subtitle {
+    @apply text-sm text-base-content/70;
 }
