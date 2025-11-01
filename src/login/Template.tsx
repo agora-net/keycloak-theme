@@ -8,6 +8,7 @@ import { useInitialize } from "keycloakify/login/Template.useInitialize";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
 import "./tailwind.css";
+import "./overrides.css";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
