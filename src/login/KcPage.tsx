@@ -8,6 +8,7 @@ const UserProfileFormFields = lazy(
     () => import("./UserProfileFormFields")
 );
 const Login = lazy(() => import("./pages/Login"));
+const LoginOauthGrant = lazy(() => import("./pages/LoginOauthGrant"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -27,6 +28,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
                             doUseDefaultCss={false}
                         />
                     );
+
+                 case "login-oauth-grant.ftl": return (
+                       <LoginOauthGrant
+                           {...{ kcContext, i18n, classes }}
+                           Template={Template}
+                           doUseDefaultCss={false}
+                       />
+                   );
                     default:
                         return (
                             <DefaultPage

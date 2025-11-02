@@ -42,6 +42,23 @@ export const Default: Story = {
 };
 
 /**
+ * WithoutInternationalization:
+ * - Purpose: Tests the component when internationalization is disabled.
+ * - Scenario: The component renders with no internationalization enabled, ensuring the component works without translations.
+ * - Key Aspect: Ensures the component renders correctly when internationalization is disabled.
+ */
+export const WithoutInternationalization: Story = {
+    render: () => <KcPageStory kcContext={{
+        ...mockKcContext,
+        oauth: {
+            ...mockKcContext.oauth,
+            clientScopesRequested: [{ consentScreenText: "Scope1", dynamicScopeParameter: "age:gte:18" }, { consentScreenText: "Scope2" }]
+        },
+        realm: { internationalizationEnabled: false }
+    }} />
+};
+
+/**
  * WithoutScopes:
  * - Purpose: Tests the component when no OAuth scopes are requested.
  * - Scenario: The component renders with no scopes listed under the consent screen.

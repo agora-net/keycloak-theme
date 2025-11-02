@@ -96,3 +96,7 @@ input#rememberMe {
 #kc-content-wrapper {
     @apply flex flex-col gap-4;
 }
+
+.kcFormButtonsWrapperClass {
+    @apply flex flex-col gap-4;
+}
