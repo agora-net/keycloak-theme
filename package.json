@@ -1,12 +1,11 @@
 {
-    "name": "keycloakify-starter",
-    "version": "0.0.0",
-    "description": "Starter for Keycloakify 11",
+    "name": "agora-keycloak-theme",
+    "version": "1.0.0",
+    "description": "Agora Keycloak Theme",
     "repository": {
         "type": "git",
-        "url": "git://github.com/codegouvfr/keycloakify-starter.git"
+        "url": "git://github.com/agora-net/keycloak-theme.git"
     },
-    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
@@ -15,7 +14,11 @@
         "format": "prettier . --write"
     },
     "license": "MIT",
-    "keywords": [],
+    "keywords": [
+        "keycloak",
+        "theme",
+        "agora"
+    ],
     "dependencies": {
         "@tailwindcss/vite": "^4.1.16",
         "classnames": "^2.5.1",
