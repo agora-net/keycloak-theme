@@ -6,7 +6,7 @@
 }
 
 .kcFormCardClass {
-    @apply card w-96 bg-base-100 shadow-sm p-4 flex flex-col gap-4 ;
+    @apply card w-full max-w-xl bg-base-100 shadow-sm p-4 flex flex-col gap-4 ;
 }
 
 #kc-page-title {
