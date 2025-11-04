@@ -3,5 +3,10 @@
         "keycloakify"
     ],
     // https://github.com/tailwindlabs/tailwindcss/discussions/5258#discussioncomment-1979394
-    "css.customData": [".vscode/tailwind.json"]
+    "css.customData": [
+        ".vscode/tailwind.json"
+    ],
+    "cSpell.ignoreWords": [
+        "choco"
+    ]
 }
