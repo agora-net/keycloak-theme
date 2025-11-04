@@ -54,7 +54,7 @@ input#rememberMe {
 }
 
 .kcButtonClass {
-    @apply btn;
+    @apply btn flex-1 py-2;
 }
 
 .kcButtonPrimaryClass {
@@ -98,5 +98,5 @@ input#rememberMe {
 }
 
 .kcFormButtonsWrapperClass {
-    @apply flex flex-col gap-4;
+    @apply flex flex-col lg:flex-row gap-4;
 }

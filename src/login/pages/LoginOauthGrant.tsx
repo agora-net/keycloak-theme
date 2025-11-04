@@ -46,7 +46,7 @@ export default function LoginOauthGrant(props: PageProps<Extract<KcContext, { pa
         >
             <div id="kc-oauth" className="content-area">
                 <h3>{msg("oauthGrantRequest", advancedMsgStr(client.name ?? client.clientId))}</h3>
-                <ul className="join join-vertical w-full my-4">
+                <ul className="list shadow-sm w-full my-4">
                     {oauth.clientScopesRequested.map(clientScope => {
                         // Check if this has a dynamic age parameter
                         if (clientScope.consentScreenText === "age:" && clientScope.dynamicScopeParameter) {
@@ -55,31 +55,27 @@ export default function LoginOauthGrant(props: PageProps<Extract<KcContext, { pa
                             if (match) {
                                 const [, operator, age] = match;
                                 return (
-                                    <li key={`age-${operator}-${age}`} className="collapse collapse-arrow join-item  w-full">
-                                        <input type="radio" name="oauth-grant-consent" />
-                                        <div className="collapse-title font-semibold">{getAgeVerificationText(operator, age)}</div>
-                                        <div className="collapse-content text-sm">Placeholder text</div>
+                                    <li key={`age-${operator}-${age}`} className="list-row w-full">
+                                        {getAgeVerificationText(operator, age)}
                                     </li>
                                 );
                             }
                         }
 
                         return (
-                            <li key={clientScope.consentScreenText} className="collapse collapse-arrow join-item w-full">
-                                <input type="radio" name="oauth-grant-consent" />
-                                <div className="collapse-title font-semibold">{advancedMsg(clientScope.consentScreenText)}</div>
-                                <div className="collapse-content text-sm">Placeholder text</div>
+                            <li key={clientScope.consentScreenText} className="list-row w-full">
+                                {advancedMsg(clientScope.consentScreenText)}
                             </li>
                         );
                     })}
                 </ul>
 
                 {(client.attributes.policyUri || client.attributes.tosUri) && (
-                    <h3>
-                        {client.name ? msg("oauthGrantInformation", advancedMsgStr(client.name)) : msg("oauthGrantInformation", client.clientId)}
+                    <p className="text-sm text-base-content/70 text-balance">
+                        {client.name ? msg("oauthGrantInformation", advancedMsgStr(client.name)) : msg("oauthGrantInformation", client.clientId)}{" "}
+                        {msg("oauthGrantReview")}
                         {client.attributes.tosUri && (
                             <>
-                                {msg("oauthGrantReview")}
                                 <a href={client.attributes.tosUri} target="_blank" rel="noreferrer" className="link">
                                     {msg("oauthGrantTos")}
                                 </a>
@@ -87,13 +83,14 @@ export default function LoginOauthGrant(props: PageProps<Extract<KcContext, { pa
                         )}
                         {client.attributes.policyUri && (
                             <>
-                                {msg("oauthGrantReview")}
+                                {client.attributes.tosUri && " and "}
                                 <a href={client.attributes.policyUri} target="_blank" rel="noreferrer" className="link">
                                     {msg("oauthGrantPolicy")}
                                 </a>
                             </>
                         )}
-                    </h3>
+                        .
+                    </p>
                 )}
 
                 <form className="form-actions" action={url.oauthAction} method="POST">

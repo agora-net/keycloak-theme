@@ -5,7 +5,10 @@ import type { ThemeName } from "../kc.gen";
 /** @see: https://docs.keycloakify.dev/features/i18n */
 const { useI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>().withCustomTranslations({
     en: {
-        oauthGrantRequest: "{0} would like to access your data"
+        oauthGrantRequest: "{0} would like to access your data.",
+        oauthGrantReview: "Read their ",
+        "oauthGrantTos": "terms of service",
+        "oauthGrantPolicy": "privacy policy"
     }
 }).build();
 
