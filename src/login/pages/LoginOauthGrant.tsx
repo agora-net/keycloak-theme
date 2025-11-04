@@ -71,7 +71,7 @@ export default function LoginOauthGrant(props: PageProps<Extract<KcContext, { pa
                 </ul>
 
                 {(client.attributes.policyUri || client.attributes.tosUri) && (
-                    <p className="text-sm text-base-content/70 text-balance">
+                    <p className="text-sm text-base-content/70 lg:text-balance">
                         {client.name ? msg("oauthGrantInformation", advancedMsgStr(client.name)) : msg("oauthGrantInformation", client.clientId)}{" "}
                         {msg("oauthGrantReview")}
                         {client.attributes.tosUri && (
