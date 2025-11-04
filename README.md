@@ -1,5 +1,11 @@
 # Quick start
 
+## Development
+
+### Helpful tips
+
+- You can use `console.log(window.kcContext)` to understand what is available in the UI [according to the docs](https://github.com/keycloakify/keycloakify/discussions/792)
+
 ## Testing the theme locally
 
 [Documentation](https://docs.keycloakify.dev/testing-your-theme)
@@ -15,9 +21,9 @@ Tailwind and DaisyUI are set up. Where possible, use `@apply` on the Keycloakify
 You need to have [Maven](https://maven.apache.org/) installed to build the theme (Maven >= 3.1.1, Java >= 7).  
 The `mvn` command must be in the $PATH.
 
--   On macOS: `brew install maven`
--   On Debian/Ubuntu: `sudo apt-get install maven`
--   On Windows: `choco install openjdk` and `choco install maven` (Or [download](https://maven.apache.org/download.cgi))
+- On macOS: `brew install maven`
+- On Debian/Ubuntu: `sudo apt-get install maven`
+- On Windows: `choco install openjdk` and `choco install maven` (Or [download](https://maven.apache.org/download.cgi))
 
 ```bash
 npm run build-keycloak-theme
