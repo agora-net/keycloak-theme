@@ -7,7 +7,14 @@ const mockKcContext = {
         oauthAction: "/oauth-action"
     },
     oauth: {
-        clientScopesRequested: [{ consentScreenText: "Scope1", dynamicScopeParameter: "dynamicScope1" }, { consentScreenText: "Scope2" }],
+        clientScopesRequested: [
+            {
+                consentScreenText: "age:",
+                dynamicScopeParameter: "gte:18"
+            },
+            { consentScreenText: "Scope1", dynamicScopeParameter: "dynamicScope1" },
+            { consentScreenText: "Scope2" }
+        ],
         code: "mockCode"
     },
     client: {
@@ -48,14 +55,14 @@ export const Default: Story = {
  * - Key Aspect: Ensures the component renders correctly when internationalization is disabled.
  */
 export const WithoutInternationalization: Story = {
-    render: () => <KcPageStory kcContext={{
-        ...mockKcContext,
-        oauth: {
-            ...mockKcContext.oauth,
-            clientScopesRequested: [{ consentScreenText: "Scope1", dynamicScopeParameter: "age:gte:18" }, { consentScreenText: "Scope2" }]
-        },
-        realm: { internationalizationEnabled: false }
-    }} />
+    render: () => (
+        <KcPageStory
+            kcContext={{
+                ...mockKcContext,
+                realm: { internationalizationEnabled: false }
+            }}
+        />
+    )
 };
 
 /**
